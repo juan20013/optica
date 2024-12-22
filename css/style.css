@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Arimo:ital,wght@0,400..700;1,400..700&family=Baskervville+SC&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Archivo", serif;
+  position: relative;
+  min-height: 98vh;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu .logo {
+  display: flex;
+  align-items: center;
+}
+.menu .logo img {
+  width: 100px;
+}
+.menu .navbar {
+  display: flex;
+  align-items: center;
+  margin: 0px 100px;
+}
+.menu ul {
+  display: flex;
+}
+.menu li {
+  padding: 15px;
+}
+.menu a {
+  color: #ffffff;
+}
+.menu li:hover {
+  background-color: rgba(4, 119, 23, 0.6117647059);
+}
+.menu .checkbtn {
+  position: relative;
+  right: -900px;
+  top: 30px;
+  font-size: 40px;
+  color: #ffffff;
+  float: right;
+  cursor: pointer;
+  display: none;
+}
+.menu #check {
+  display: none;
+}
+
+.main {
+  display: grid;
+}
+.main .lente {
+  position: relative;
+  display: inline-block;
+}
+.main img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.main a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.9725490196);
+  border: 1px solid #0e0b0b;
+  padding: 20px 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main a:hover {
+  background-color: rgba(4, 119, 23, 0.6117647059);
+}
+
+.container-cat {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+.container-cat .contenedor {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container-cat h3 {
+  color: #007bff;
+  text-align: center;
+  font-size: 50px;
+}
+.container-cat h2 {
+  color: #007bff;
+  text-align: center;
+}
+.container-cat .contenedor-lentes {
+  flex: 1 1 auto; /* Los elementos no se encogen ni crecen */
+  width: 200px; /* Ancho fijo de los elementos */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.container-cat .contenedor-lentes:hover {
+  transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.container-cat img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+.container-cat p {
+  font-size: 18px;
+  color: #007bff;
+  margin: 0 0 10px;
+}
+
+.footer {
+  color: #007bff;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.article {
+  padding: 50px 20px;
+  display: flex;
+  padding: 100px;
+}
+.article .contenedor-img {
+  text-align: left;
+  margin: 20px;
+}
+.article .contenedor-img img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.article .contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.article .parrafo {
+  flex: 1;
+  max-width: 600px;
+  margin: 30px;
+}
+.article .parrafo h2 {
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.article .parrafo p {
+  font-size: 23px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contacto {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+}
+.contacto h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+.contacto p {
+  font-size: 16px;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contacto label {
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+}
+.contacto input, .contacto textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #1a0b0b;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.contacto textarea {
+  resize: none;
+}
+.contacto button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contacto button:hover {
+  background-color: #0056b3;
+}
+
+.carrito {
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 600px;
+  height: 500px;
+  text-align: center;
+  position: absolute;
+  left: 35%;
+  top: 20%;
+}
+.carrito h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+.carrito .caja-dni {
+  background-color: #53ce91;
+}
+.carrito p {
+  font-size: 23px;
+  color: #000000;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.carrito input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #1a0b0b;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.carrito .boton {
+  padding: 10px;
+}
+.carrito .boton button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.carrito .boton button:hover {
+  background-color: #0056b3;
+}
+.carrito .btn {
+  padding: 20px;
+}
+.carrito .btn button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #32c072;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.carrito .btn button:hover {
+  background-color: #18693d;
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  border-top: 3px solid #4CAF50;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}
+.footer a {
+  color: #4CAF50; /* Enlace con color verde */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 858px) {
+  .menu .checkbtn {
+    display: block;
+    left: 150px;
+  }
+  .menu ul {
+    background: #767a80;
+    position: fixed;
+    width: 100%;
+    left: -50px;
+    top: 100px;
+    height: 50vh;
+    text-align: center;
+    transition: all 0.5s;
+    flex-direction: column;
+  }
+  .menu nav ul li {
+    display: block;
+    line-height: 30px;
+  }
+  .menu nav ul li a {
+    font-size: 20px;
+  }
+  .menu li a:hover, .menu li a:active {
+    background: none;
+    color: rgb(0, 0, 0);
+  }
+  .menu #check:checked ~ ul {
+    left: 0px;
+  }
+  .main .lente {
+    position: inherit;
+  }
+  .main img {
+    width: 100%;
+    height: auto;
+    top: 100px;
+  }
+  .main a {
+    position: relative;
+    top: 70%;
+    left: 30%;
+    color: #ffffff;
+    border: 1px solid #fffbfb;
+    font-size: 20px;
+  }
+  .footer {
+    position: relative;
+    bottom: -350px;
+    font-size: 13px;
+  }
+  .container-cat {
+    padding: 20px;
+  }
+  .container-cat .contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .container-cat .contenedor-lentes {
+    flex: 1 1 auto;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .article {
+    display: contents;
+    flex-wrap: wrap;
+  }
+  .article .parrafo {
+    position: relative;
+    flex: 1;
+    max-width: 600px;
+    margin: 30px;
+    top: 0px;
+    left: 0px;
+  }
+  .article .parrafo h2 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  .article .parrafo p {
+    display: flex;
+    font-size: 23px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  .contacto {
+    position: static;
+    top: 150px;
+    left: 0px;
+    width: 370px;
+    height: auto;
+  }
+  .carrito {
+    position: static;
+    width: 360px;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
